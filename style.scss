@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Big Shoulders Display;
+    src: url('/BigShouldersDisplay-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: Lexend Deca;
+    src: url('/LexendDeca-VariableFont_wght.ttf');
+}
+
+body {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#app {
+    width: 100%;
+    max-width: 920px;
+    display: flex;
+
+    @media (max-width: 376px) {
+        flex-direction: column;
+        padding: 88px 24px;
+    }
+}
+
+.card {
+    padding: 48px;
+
+    h2 {
+        color: #F2F2F2;
+        font-family: Big Shoulders Display;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: #FFF;
+        font-family: Lexend Deca;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        opacity: 0.75;
+        margin-bottom: 80px;
+
+        @media (max-width: 376px) {
+            margin-bottom: 36px;
+        }
+    }
+
+    button {
+        font-family: Lexend Deca;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        background-color: #fff;
+        padding: 10px 30px;
+        border-radius: 30px;
+        border: 2px solid #fff;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &:hover{
+            color: #fff !important;
+            background-color: transparent;
+        }
+    }
+
+    &.sedans {
+        background-color: #E28625;
+        border-radius: 8px 0 0 8px;
+
+        button{
+            color: #E28625;
+        }
+
+        @media (max-width: 376px) {
+            border-radius: 8px 8px 0 0;
+        }
+    }
+
+    &.suvs {
+        background-color: #006971;
+
+        button{
+            color: #006971;
+        }
+    }
+
+    &.luxury {
+        background-color: #004140;
+        border-radius: 0 8px 8px 0;
+
+        button{
+            color: #004140;
+        }
+
+        @media (max-width: 376px) {
+            border-radius: 0 0 8px 8px ;
+        }
+    }
+}
